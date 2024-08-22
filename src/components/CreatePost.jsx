@@ -1,10 +1,10 @@
-import { Box, Button, Grid, TextField, Typography } from "@mui/material";
+import { Box, Button, Grid, TextField, Typography } from '@mui/material'
 
 export function CreatePost() {
   return (
     <>
       <Typography
-        sx={{ textAlign: "center", mt: 2 }}
+        sx={{ textAlign: 'center', mt: 2 }}
         variant='h4'
         component='div'
       >
@@ -53,5 +53,5 @@ export function CreatePost() {
         </Button>
       </Box>
     </>
-  );
+  )
 }

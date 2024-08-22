@@ -1,4 +1,4 @@
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types'
 import {
   Typography,
   Box,
@@ -7,26 +7,26 @@ import {
   InputLabel,
   Select,
   MenuItem,
-} from "@mui/material";
-import { useState } from "react";
+} from '@mui/material'
+import { useState } from 'react'
 
 export function PostSorting({ fields = [] }) {
   // State to manage selected values
-  const [sortBy, setSortBy] = useState(fields[0] || ""); // default to the first field or empty string
-  const [sortOrder, setSortOrder] = useState("ascending");
+  const [sortBy, setSortBy] = useState(fields[0] || '') // default to the first field or empty string
+  const [sortOrder, setSortOrder] = useState('ascending')
 
   // Handlers for the select inputs
   const handleSortByChange = (event) => {
-    setSortBy(event.target.value);
-  };
+    setSortBy(event.target.value)
+  }
 
   const handleSortOrderChange = (event) => {
-    setSortOrder(event.target.value);
-  };
+    setSortOrder(event.target.value)
+  }
   return (
     <>
       <Typography
-        sx={{ textAlign: "center", mt: 2 }}
+        sx={{ textAlign: 'center', mt: 2 }}
         variant='h5'
         component='div'
       >
@@ -48,7 +48,7 @@ export function PostSorting({ fields = [] }) {
                 {fields.map((field) => (
                   <MenuItem key={field} value={field}>
                     {field}
-                    {console.log("FIELD :", field)};{" "}
+                    {console.log('FIELD :', field)};{' '}
                   </MenuItem>
                 ))}
               </Select>
@@ -65,17 +65,17 @@ export function PostSorting({ fields = [] }) {
                 value={sortOrder}
                 onChange={handleSortOrderChange}
               >
-                <MenuItem value={"ascending"}>Ascending</MenuItem>
-                <MenuItem value={"descending"}>Descending</MenuItem>
+                <MenuItem value={'ascending'}>Ascending</MenuItem>
+                <MenuItem value={'descending'}>Descending</MenuItem>
               </Select>
             </FormControl>
           </Grid>
         </Grid>
       </Box>
     </>
-  );
+  )
 }
 
 PostSorting.propTypes = {
   fields: PropTypes.arrayOf(PropTypes.string).isRequired,
-};
+}

@@ -1,11 +1,11 @@
-import { Box, Button, Grid, TextField, Typography } from "@mui/material";
-import PropTypes from "prop-types";
+import { Box, Button, Grid, TextField, Typography } from '@mui/material'
+import PropTypes from 'prop-types'
 
 export function PostFilter({ field }) {
   return (
     <>
       <Typography
-        sx={{ textAlign: "center", mt: 2 }}
+        sx={{ textAlign: 'center', mt: 2 }}
         variant='h4'
         component='div'
       >
@@ -33,6 +33,6 @@ export function PostFilter({ field }) {
         </Button>
       </Box>
     </>
-  );
+  )
 }
-PostFilter.propTypes = { field: PropTypes.string.isRequired };
+PostFilter.propTypes = { field: PropTypes.string.isRequired }
